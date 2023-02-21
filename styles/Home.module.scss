@@ -1,0 +1,415 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.section,
+.sectionHero,
+.sectionProducts,
+.sectionOurService {
+  @apply min-h-screen;
+}
+.sectionShowReel {
+  aspect-ratio: 16 / 9;
+}
+
+.sectionHero {
+  @apply relative overflow-hidden;
+}
+.sectionShowReel {
+  @apply relative cursor-pointer;
+}
+.sectionProject {
+  @apply relative;
+  height: 200vh;
+}
+.sectionProducts {
+  @apply bg-neutral-800 text-neutral-0;
+  width: 100%;
+  position: relative;
+}
+.sectionOurService {
+  @apply bg-neutral-800 text-neutral-900 relative;
+}
+
+/** REEL */
+.reelVideoContainer {
+  @apply w-full h-full flex items-center justify-center sm:text-base;
+}
+
+@media (min-width: 1440px) {
+  .reelVideoContainer {
+    clip-path: url(#clip-ellipse);
+  }
+}
+
+/** PROJECT */
+.project__title {
+  @apply mx-auto 3xl:text-h3 2xl:text-h2 text-h6 text-center pt-[10%] font-medium h-full;
+}
+
+/** PRODUCT */
+.productWrapper {
+  @apply sticky h-screen top-0 overflow-hidden w-full flex flex-col;
+}
+
+.productItemLeft {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  @for $i from 1 through 5 {
+    .productItemTag:nth-child(#{$i}) {
+      transition-delay: $i * 100ms + 200ms;
+      animation-delay: $i * 100ms;
+    }
+  }
+}
+
+.productItemHead {
+  @apply text-h5 font-bold;
+  > h5 {
+    perspective: 400px;
+  }
+}
+.productItemDesc {
+  @apply mt-10;
+  perspective: 600px;
+}
+.productItemDesc > div {
+  @apply transition relative duration-300 ease-out;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: center top;
+  -moz-transform-origin: center top;
+  -ms-transform-origin: center top;
+  -o-transform-origin: center top;
+  transform-origin: center top;
+  opacity: 0;
+}
+
+.productItemTags {
+  @apply space-y-6 mt-20;
+}
+.productItemTag {
+  @apply list-item transition-opacity duration-700;
+  list-style-type: square;
+  list-style-position: inside;
+  opacity: 0;
+  &::marker {
+    font-size: 1.25rem;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.show {
+  .productItemTag {
+    animation: show 1s forwards;
+  }
+}
+
+.hide {
+  pointer-events: none;
+  .productItemTag {
+    opacity: 1;
+    animation: hide 1s forwards;
+  }
+}
+
+.productItemRight {
+  height: 100vh;
+}
+
+.doubleHeight {
+  height: 200vh;
+}
+.section:nth-child(odd) {
+  @apply bg-neutral-0 text-neutral-800;
+}
+
+/** Hero Banner */
+.bannerContainer {
+  @apply container 3xl:pt-[149px] 2xl:pt-28 xl:pt-[5.25rem] lg:pt-[6.625rem] md:pt-16 pt-8 flex;
+  @apply sm:pb-52 pb-[100%];
+}
+.bannerTitle {
+  @apply 3xl:h-[320px] sm:text-h2 font-bold 2xl:h-[240px] text-h7;
+  perspective: 1000px;
+
+  & > span {
+    @apply inline-block;
+  }
+}
+.hasAnimation {
+  .bannerTitle > span {
+    @apply inline-block animate-[move-up,rotateX,show] -translate-y-2;
+    transform-origin: center bottom -100px;
+    transform-style: preserve-3d;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    opacity: 0;
+    &:nth-child(1) {
+    }
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.1s;
+    }
+  }
+}
+
+.bannerImage {
+  @apply absolute sm:inset-y-0 sm:right-0 sm:left-auto bottom-0 inset-x-0 cursor-pointer z-0 animate-show aspect-square;
+  -webkit-user-drag: none;
+}
+
+.bannerInfo {
+  @apply mt-12 sm:mt-8;
+}
+.bannerDescription {
+  @apply text-sm animate-[move-up,show];
+  animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-delay: 0.5s;
+}
+.bannerService {
+  @apply text-lg mt-5;
+  & > span {
+    @apply inline-block animate-[move-up,show];
+    --initY: 50px;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    opacity: 0;
+    margin-right: 72px;
+
+    &:nth-child(1) {
+      animation-delay: 0.7s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.75s;
+    }
+  }
+}
+
+.bannerWork {
+  @apply text-xl font-bold flex items-center h-10 3xl:mt-[5.75rem] mt-9 animate-show opacity-0 sm:text-base;
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.separator {
+  @apply top-full relative w-[271.875px] h-[48.54px] lg:w-[420px] lg:h-[75px] 2xl:w-[560px] 2xl:h-[100px];
+}
+.separatorContainer {
+  @apply w-full border-neutral-0 opacity-20 absolute left-1/2 top-0 -translate-x-1/2 h-full border-2 rounded-[100%] transition-[border] -translate-y-1/2;
+}
+
+.separatorItem {
+  @apply absolute w-full border border-neutral-0 opacity-20;
+  height: 0;
+}
+
+/** CLIENT */
+.client__item_container {
+  @apply relative h-[92px] sm:h-[72px] lg:h-20 2xl:h-[108px] 3xl:h-[144px];
+
+  transform: translateY(calc(var(--value, 0px) - var(--percent, 0%) + var(--vh, 0vh)));
+  > div {
+    height: 100%;
+  }
+}
+.client__item {
+  @apply absolute bottom-0 inset-x-0 flex;
+  height: calc(100% - var(--height, 0px) + var(--value, 0px));
+  &:hover {
+    @apply bg-neutral-900;
+    .client__item_company {
+      opacity: 0;
+    }
+    .client__item_logo {
+      opacity: 1;
+    }
+  }
+}
+.client__item_content {
+  @apply container flex items-center;
+}
+
+.client__item_left {
+  @apply 3xl:py-9 2xl:py-5 py-4 3xl:pl-32 w-1/2 font-bold;
+  height: 100%;
+  > div {
+    @apply relative h-full;
+  }
+}
+.client__item_company {
+  @apply transition-opacity inline-block 3xl:pl-[162px] 2xl:pl-[122px];
+}
+.client__item_logo {
+  @apply flex absolute left-0 top-0 h-full transition-opacity;
+  opacity: 0;
+}
+
+.client__item_right {
+  @apply 3xl:py-10 py-4 3xl:pl-6 w-1/2;
+  height: 100%;
+  > div {
+    @apply line-clamp-3 sm:line-clamp-2 lg:line-clamp-1;
+  }
+}
+
+// Old stypes
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .thirteen::before {
+    animation: none;
+  }
+
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .description a {
+    padding: 1rem;
+  }
+
+  .description p,
+  .description div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .description p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    backdrop-filter: blur(24px);
+  }
+
+  .description div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent 0%, rgb(var(--background-end-rgb)) 40%);
+    z-index: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo,
+  .thirteen img {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

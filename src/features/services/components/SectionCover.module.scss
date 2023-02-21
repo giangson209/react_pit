@@ -1,0 +1,57 @@
+@import "../../../../styles/breakpoints.scss";
+.wrapper {
+  @apply 3xl:pt-20 3xl:pb-44 2xl:pb-32 2xl:pt-12 xl:pt-9 xl:pb-24 md:py-20 py-12;
+}
+
+.container {
+  @apply flex justify-center;
+}
+
+.heading {
+  @apply text-h4 py-9 relative px-2 select-none;
+  @apply md:text-h2 md:py-14 md:px-4;
+  @apply xl:text-h0 xl:pt-[78px] xl:pb-[105px] xl:px-4.5;
+  @apply 2xl:pt-[104px] 2xl:pb-[140px] 2xl:px-6;
+  @apply 3xl:pt-[140px] 3xl:pb-[186px] 3xl:px-8;
+
+  &:hover {
+    svg > g > g:first-child {
+      opacity: 0;
+    }
+    .banner__vid {
+      opacity: 0.8;
+    }
+  }
+  svg > g > g:first-child {
+    @apply transition-all;
+    opacity: 100;
+  }
+  h1 {
+    @apply mix-blend-difference text-neutral-0;
+  }
+}
+
+.banner__container {
+  @apply absolute bottom-0 w-full;
+  padding-bottom: 49.236641221%;
+}
+
+.banner__vid {
+  @apply absolute inset-0 opacity-0 transition-opacity overflow-hidden;
+  clip-path: url(#clipPath);
+}
+
+.desc {
+  @apply text-lg text-center mx-auto mt-6 md:mt-8 2xl:mt-10 3xl:mt-[53px];
+
+  @include tablet {
+    max-width: 642px;
+  }
+  @include laptop {
+    max-width: 572px;
+    @apply text-h8;
+  }
+  @include fullhd {
+    max-width: 768px;
+  }
+}

@@ -1,0 +1,197 @@
+@use "sass:map";
+
+.button {
+  @apply rounded-full inline-flex items-center;
+}
+
+// Ghost (Tertiary)
+.ghost__tertiary_container {
+  @apply relative overflow-hidden;
+}
+.ghost__tertiary {
+  @apply transition-all ease-in duration-300 absolute inset-0 text-white;
+  clip-path: circle(var(--size, 8px) at var(--offset, 12%) 50%);
+}
+.button:hover .ghost__tertiary {
+  clip-path: circle(150% at var(--offset, 12%) 50%);
+}
+
+$sizes: ("sm", "md", "lg", "xl");
+$iconSize: (
+  "sm": "px-4 py-3",
+  "md": "px-5 py-4",
+  "lg": "px-8 py-6",
+  "xl": "py-8 px-10",
+);
+$circleSize: (
+  "sm": "p-4",
+  "md": "p-6",
+  "lg": "p-10",
+  "xl": "p-12",
+);
+
+$leadingIcon: (
+  "sm": "-ml-1 mr-1.5 h-4 w-4",
+  "md": "-ml-1 mr-2 h-5 w-5",
+  "lg": "-ml-1.5 mr-2 h-6 w-6",
+  "xl": "-ml-1.5",
+);
+
+$dotSize: (
+  "sm": 5px,
+  "md": 6px,
+  "lg": 7px,
+  "xl": 8px,
+);
+$dotOffset: (
+  "sm": 10px,
+  "md": 12px,
+  "lg": 14px,
+  "xl": 16px,
+);
+
+// .sm
+// .sm.circle
+// .sm.leadingIcon
+// .sm .ghost__teritary
+@each $size in $sizes {
+  .#{$size} {
+    @apply #{map.get($iconSize,$size)};
+    &.circle {
+      @apply #{map.get($circleSize,$size)};
+    }
+    &.leadingIcon {
+      @apply #{map.get($leadingIcon,$size)};
+    }
+
+    .ghost__tertiary {
+      --size: #{map.get($dotSize, $size)};
+      --offset: #{map.get($dotOffset, $size)};
+    }
+    .ghost__tertiary_animation {
+      animation: growUp 500ms ease-out;
+    }
+  }
+}
+@keyframes growUp {
+  0% {
+    clip-path: circle(var(--size, 8px) at var(--offset, 12%) 50%);
+  }
+  50% {
+    clip-path: circle(calc(var(--size, 8px) * 2) at var(--offset, 12%) 50%);
+  }
+  100% {
+    clip-path: circle(var(--size, 8px) at var(--offset, 12%) 50%);
+  }
+}
+
+// Styles
+.primary {
+  @apply bg-primary-600 text-neutral-0 border-primary-600;
+}
+
+.secondary {
+  @apply bg-neutral-0 text-neutral-800 border-neutral-0;
+  border-style: solid;
+  &.outline {
+    @apply bg-transparent text-neutral-0;
+  }
+}
+
+.outline {
+  @apply border;
+}
+
+// Button
+.btn__primary {
+}
+
+// Button with icon
+.btn__icon {
+  @apply inline-flex items-center bg-primary-600 text-neutral-0 font-medium rounded-full;
+}
+
+.btn__icon_left,
+.btn__icon_right {
+  @apply w-5 h-5;
+  & > svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@mixin button__size($cn, $size, $mg, $py, $px, $textSize) {
+  .btn__icon.#{$cn} {
+    @apply text-#{$textSize};
+    padding: $py $px;
+  }
+  .#{$cn} .btn__icon_left,
+  .#{$cn} .btn__icon_right {
+    height: #{$size};
+    width: #{$size};
+  }
+  .#{$cn} .btn__icon_left {
+    margin-right: #{$mg};
+  }
+  .#{$cn} .btn__icon_right {
+    margin-left: #{$mg};
+  }
+}
+
+@include button__size("sm", 20px, 8px, 12px, 16px, "xs");
+@include button__size("md", 32px, 16px, 16px, 20px, "sm");
+@include button__size("lg", 36px, 20px, 20px, 32px, "base");
+
+// Button circular
+.btn__circular {
+  @apply p-1 border border-transparent rounded-full;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+.btn__circular.sm {
+  @apply w-14 h-14;
+}
+.btn__circular.md {
+  @apply w-20 h-20;
+}
+.btn__circular.lg {
+  @apply w-32 h-32;
+}
+
+.sm .btn__circular_icon {
+  @apply h-6 w-6;
+}
+
+.md .btn__circular_icon {
+  @apply h-8 w-8;
+}
+
+.lg .btn__circular_icon {
+  @apply h-12 w-12;
+}
+
+// Styles
+.btn__primary {
+  @apply bg-primary-600 text-neutral-0;
+}
+.btn__secondary {
+  @apply border-neutral-0 bg-transparent text-neutral-0;
+}
+.fill.btn__secondary {
+  @apply bg-neutral-0 text-neutral-800;
+}
+.btn__secondary_dark {
+  @apply border-neutral-800 bg-transparent text-neutral-800;
+}
+.fill.btn__secondary_dark {
+  @apply bg-neutral-800 text-neutral-0;
+}
+
+.default_outline {
+  @apply border border-current rounded-full;
+}
+.btn__primary.default_outline {
+  @apply border-primary-600;
+}

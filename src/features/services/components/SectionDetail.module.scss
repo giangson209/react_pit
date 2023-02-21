@@ -1,0 +1,116 @@
+@import "../../../../styles/breakpoints.scss";
+
+.lottie__container {
+  @apply w-1/2 h-screen flex items-center justify-center;
+}
+.lottie {
+  @apply aspect-square;
+
+  @include tablet {
+    width: 324px;
+    margin-left: auto;
+  }
+  @include laptop {
+    width: 438px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  @include fullhd {
+    width: 586px;
+  }
+  @include screen2k {
+    width: 781px;
+  }
+}
+
+.container {
+  @apply bg-neutral-800;
+}
+
+.wrapper {
+  @apply w-full overflow-auto md:pb-20 pb-10;
+  @include tablet {
+    height: 400vh;
+    overflow: initial;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper {
+    max-width: 100%;
+    @apply px-0;
+  }
+}
+
+.detail__container {
+  @apply top-0 text-neutral-0 flex w-full overflow-auto;
+  @apply lg:sticky lg:h-screen lg:block lg:overflow-hidden;
+}
+
+.detail__item {
+  @apply top-0 flex items-center w-screen flex-shrink-0 pt-12;
+  @apply md:pt-20;
+  @apply lg:absolute lg:touch-none lg:opacity-0 lg:h-screen lg:w-full lg:pt-0;
+  &.show {
+    @apply touch-auto opacity-100;
+  }
+}
+
+.detail__thumb {
+  @apply pb-full relative;
+  display: block;
+  width: 228px;
+  @include tabletsm {
+    @apply mt-6;
+    width: 324px;
+  }
+  @include tablet {
+    display: none;
+  }
+  > img {
+    @apply w-full h-full absolute inset-0;
+  }
+}
+
+.detail__footer {
+  @apply flex justify-between items-end pt-10;
+  @apply md:mt-6 md:pt-6;
+  @apply lg:hidden;
+}
+
+.detail__footer,
+.detail__item {
+  @apply px-6;
+  @apply md:px-12;
+  @apply lg:px-0;
+}
+
+.left {
+  @apply hidden;
+  @apply lg:w-1/2 lg:block;
+}
+.right {
+  @apply w-full h-full;
+  @apply lg:w-1/2;
+}
+
+.content {
+  @apply flex items-center flex-col h-full;
+  @apply lg:items-start lg:justify-center;
+}
+
+.title {
+  @apply text-h8 md:text-h6 w-full flex items-center justify-center text-center h-14;
+  @apply lg:text-left lg:h-auto lg:block;
+
+  @apply 2xl:max-w-xs;
+  @apply 3xl:max-w-md;
+}
+
+.desc {
+  @apply flex-1;
+
+  @apply lg:mt-8 lg:flex-none;
+  @apply xl:max-w-md xl:mt-6;
+  @apply 2xl:max-w-xl 2xl:mt-8 2xl:pb-[60px];
+  @apply 3xl:max-w-[773px] 3xl:mt-10 3xl:pb-20;
+}

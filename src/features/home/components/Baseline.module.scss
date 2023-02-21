@@ -1,0 +1,7 @@
+.vertical {
+  @apply border-l border-neutral-0/20 absolute inset-y-0 h-full origin-top;
+}
+
+.horizontal {
+  @apply border-t border-neutral-0/20 w-full;
+}

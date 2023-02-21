@@ -1,0 +1,109 @@
+.cursor {
+  @apply pointer-events-none fixed top-0 left-0 z-10 w-0 h-0 flex items-center justify-center;
+  &[data-mix-blend] {
+    mix-blend-mode: difference;
+  }
+}
+
+.cursorContainer {
+  @apply absolute scale-0 transition-transform duration-300 ease-out;
+}
+.visible {
+  @apply scale-100;
+}
+
+.cursorBackgroundContainer {
+  @apply transition-transform ease-out;
+  &[data-variant="1"] {
+    opacity: 0.95;
+  }
+}
+.cursorBackground {
+  @apply rounded-full transition-[background-color,width,height] duration-300 ease-out;
+}
+.active {
+  @apply scale-75;
+}
+
+.cursorChildren {
+  @apply absolute inset-0 flex items-center justify-center;
+}
+.clickButton > button {
+  animation: clickButton 0.5s ease-in-out;
+}
+@keyframes clickButton {
+  0% {
+    scale: 1;
+  }
+  33% {
+    scale: 0.95;
+  }
+  66% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+// dragger
+.draggerWrap {
+  @apply text-neutral-900 flex justify-between absolute items-center transition-all;
+  width: 80%;
+}
+
+.draggerCenter {
+  @apply absolute flex items-center justify-center -translate-x-1/2 -translate-y-1/2 transition-all duration-300;
+}
+.draggerText {
+  @apply opacity-0;
+}
+.draggerPoint {
+  @apply bg-neutral-900 w-3 h-3 rounded-full;
+}
+
+.draggerDragging {
+  .draggerHandle {
+    @apply text-neutral-0;
+  }
+  .draggerText {
+    @apply opacity-100;
+  }
+  .draggerPoint {
+    @apply bg-neutral-0 opacity-0;
+  }
+
+  &.draggerWrap {
+    width: 133%;
+  }
+}
+
+// Theme
+[data-mode="dark"] {
+  .cursorBackground {
+    @apply bg-neutral-800;
+  }
+  .draggerWrap {
+    @apply text-neutral-0;
+  }
+  .draggerPoint {
+    @apply bg-neutral-0;
+  }
+
+  // Dragging
+  .draggerDragging .draggerHandle {
+    @apply text-neutral-900;
+  }
+}
+
+[data-mode="white"] {
+  .cursorBackground {
+    @apply bg-neutral-0;
+  }
+}
+
+[data-mode="primary"] {
+  .cursorBackground {
+    @apply bg-primary-600;
+  }
+}

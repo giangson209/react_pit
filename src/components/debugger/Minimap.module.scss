@@ -1,0 +1,14 @@
+.pointer {
+  @apply border-2 border-blue-500;
+  // width: 1.5em;
+  height: 1.5em;
+  padding: 0.25em;
+  border-radius: 0.375em;
+  position: absolute;
+  // top: 8px;
+  right: -0.25em;
+  left: -0.25em;
+  transform: translateY(0);
+  // border: 2px solid var(--blue);
+  filter: drop-shadow(0 0 0.125rem #aaa);
+}

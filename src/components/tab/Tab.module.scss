@@ -1,0 +1,8 @@
+.tab {
+  @apply py-[1.125rem] px-8 rounded-full border border-transparent transition-colors;
+}
+
+.active,
+.tab:hover {
+  @apply border-current;
+}

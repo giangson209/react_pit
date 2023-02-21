@@ -1,0 +1,194 @@
+[
+  {
+    "id": 5,
+    "name": "Hi FPT",
+    "title": "Convenient Network\nManagement App",
+    "tags": ["APPLICATION", "INTERACTION", "ANIMATION", "BRANDING"],
+    "brand": "FPT TELECOM",
+    "src": "/images/projects/hifpt_thumbnail.png",
+    "contents": [
+      { "src": "/images/projects/hifpt_s1.png" },
+      {
+        "title": "The challenge",
+        "content": "Aiming to become an effective assistant of every family, Hi FPT is a  multi featured application to serve the needs of customers according to the following criteria: Safety, Quality and Convenience.\n\nHi FPT application brings the best experience to customers with color harmony, simplicity in operation."
+      },
+      { "src": "/images/projects/hifpt_s2.png" },
+      {
+        "title": "Request Widgets",
+        "content": "This part has the role of helping users pay bills will become easy when managed scientifically on the application, making it easy to track, check and pay."
+      },
+      { "src": "/images/projects/hifpt_s3.png" },
+      {
+        "title": "Your Loyalty &\nPayment Reward",
+        "content": "Customers can accumulate points and level up members by using the app's features to get more exclusive offers equivalent to their tier."
+      },
+      { "src": "/images/projects/hifpt_s4.png" },
+      {
+        "title": "Internet Fee Payment",
+        "content": "The payment function is designed with the most optimal flow to make the user feel fast and reliable at all times. Flexible payment function helps users only need to pay for the network through the application."
+      },
+      { "src": "/images/projects/hifpt_s5.png" },
+      {
+        "images": [
+          { "alt": "1", "src": "/images/projects/hifpt_1_s1.png" },
+          { "alt": "2", "src": "/images/projects/hifpt_1_s2.png" },
+          { "alt": "3", "src": "/images/projects/hifpt_1_s3.png" }
+        ]
+      },
+      { "src": "/images/projects/hifpt_s6.png" },
+      {
+        "images": [
+          { "alt": "1", "src": "/images/projects/hifpt_2_s1.png" },
+          { "alt": "2", "src": "/images/projects/hifpt_2_s2.png" },
+          { "alt": "3", "src": "/images/projects/hifpt_2_s3.png" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "GIMO",
+    "title": "Financial Welfare\nSolution For Workers",
+    "tags": ["WEBSITE", "INTERACTION", "ANIMATION"],
+    "brand": "GIMO",
+    "src": "/images/projects/gimo_thumbnail.png",
+    "contents": [
+      { "src": "/images/projects/hifpt_s1.png" },
+      {
+        "title": "The challenge",
+        "content": "GIMO is an enterprise focused on providing flexible salary solutions for businesses and employees.\n\nIn this project, we aim to build a simple, modern website that has good feedback and especially brings a sense of trust to the user."
+      },
+      { "src": "/images/projects/hifpt_s2.png" },
+      {
+        "title": "About GIMO",
+        "content": "Employees feel less worried about finances when they receive a flexible salary. Human resource managers feel that GIMO helps to optimize resources, salary advance process for employees and cash flow for businesses."
+      },
+      { "src": "/images/projects/hifpt_s3.png" },
+      {
+        "title": "Simple, modern style suitable for business",
+        "content": "We chose a very minimal and clean style, with 2 main colors contrasting each other. At the same time, we always show brand identity elements throughout the interface."
+      },
+      { "src": "/images/projects/hifpt_s4.png" },
+      {
+        "images": [
+          { "alt": "1", "src": "/images/projects/hifpt_1_s1.png" },
+          { "alt": "2", "src": "/images/projects/hifpt_1_s2.png" },
+          { "alt": "3", "src": "/images/projects/hifpt_1_s3.png" }
+        ]
+      },
+      { "src": "/images/projects/hifpt_s6.png" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "ORG Invest",
+    "title": "Invesment\nApplication",
+    "tags": ["APPLICATION", "INTERACTION", "ANIMATION", "BRANDING"],
+    "brand": "ORG Group",
+    "src": "/images/projects/org_thumbnail.png",
+    "contents": [
+      { "src": "/images/projects/hifpt_s1.png" },
+      {
+        "title": "The challenge",
+        "content": "Investment is a very complicated journey with many procedures and items for users to easily monitor and manage, it is even more difficult when the audience is middle-aged. More specifically, there is no application on the market to refer to the mode of operation."
+      },
+      { "src": "/images/projects/hifpt_s2.png" },
+      {
+        "title": "Goal",
+        "content": "After a long period of human research, we needed to design this product with users in the middle age and not too tech savvy.\n\nInvesting is always a complicated process and many different procedures, so this product needs to work well in terms of interface and experience."
+      },
+      { "src": "/images/projects/hifpt_s3.png" },
+      {
+        "title": "Projects",
+        "content": "An investment project has several phases and some related information. Every project has a common method and formula for calculating profit, profit and duration depend on the investor."
+      },
+      { "src": "/images/projects/hifpt_s4.png" },
+      {
+        "images": [
+          { "alt": "1", "src": "/images/projects/hifpt_1_s1.png" },
+          { "alt": "2", "src": "/images/projects/hifpt_1_s2.png" },
+          { "alt": "3", "src": "/images/projects/hifpt_1_s3.png" }
+        ]
+      },
+      { "src": "/images/projects/hifpt_s5.png" },
+      {
+        "images": [
+          { "alt": "1", "src": "/images/projects/hifpt_2_s1.png" },
+          { "alt": "2", "src": "/images/projects/hifpt_2_s2.png" },
+          { "alt": "3", "src": "/images/projects/hifpt_2_s3.png" }
+        ]
+      },
+      { "src": "/images/projects/hifpt_s6.png" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "OneVinmec",
+    "title": "Health Assistant\nMobile Application",
+    "tags": ["APPLICATION", "INTERACTION", "ANIMATION"],
+    "brand": "VINMEC",
+    "src": "/images/projects/vinmec_thumbnail.png",
+    "contents": [
+      { "src": "/images/projects/hifpt_s1.png" },
+      {
+        "title": "The challenge",
+        "content": "OneVinmec - smart medical assistant for outstanding health.\nOneVinmec is Vinmec's exclusive smart healthcare application with an advanced technology platform. Features are updated regularly and always optimized continuously."
+      },
+      { "src": "/images/projects/hifpt_s2.png" },
+      {
+        "images": [{ "alt": "1", "src": "/images/projects/hifpt_1_s1.png" }]
+      },
+      { "src": "/images/projects/hifpt_s3.png" },
+      {
+        "title": "Appointment Scheduling",
+        "content": "Online appointment scheduling provides customers with a portal to book an appointment online, book and manage appointments, video calls, and streamline your schedule with your doctor."
+      },
+      { "src": "/images/projects/hifpt_s4.png" },
+      {
+        "title": "Health monitoring",
+        "content": "Remote health monitoring is the latest advancement in remote healthcare which aims to perform automated patient health monitoring from anywhere. Health assessment to create  a better healthcare plan."
+      },
+      { "src": "/images/projects/hifpt_s5.png" },
+      {
+        "images": [
+          { "alt": "1", "src": "/images/projects/hifpt_2_s1.png" },
+          { "alt": "2", "src": "/images/projects/hifpt_2_s2.png" },
+          { "alt": "3", "src": "/images/projects/hifpt_2_s3.png" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "pisign",
+    "title": "Electronic Signature\nand Cloud Contract",
+    "tags": ["APPLICATION", "INTERACTION", "ANIMATION", "ILLUSTRATION"],
+    "brand": "pisign",
+    "src": "/images/projects/hifpt_thumbnail.png",
+    "contents": [
+      { "src": "/images/projects/hifpt_s1.png" },
+      {
+        "title": "The challenge",
+        "content": "pisign is an amazing website that helps you manage, sign document easily, that also save time and money with clients.\n\npisign has great features like collaborate editing, track your progress with detailed statistics..."
+      },
+      { "src": "/images/projects/hifpt_s2.png" },
+      {
+        "images": [{ "alt": "1", "src": "/images/projects/hifpt_1_s1.png" }]
+      },
+      { "src": "/images/projects/hifpt_s3.png" },
+      {
+        "title": "Document",
+        "content": "Contain two main parts: Document & Statistics. The document shows the list of each type of document and the option to create a new one. Statistics show the overall number of Contracts in the company."
+      },
+      { "src": "/images/projects/hifpt_s4.png" },
+      {
+        "title": "Create New Document",
+        "content": "It’s so simple to create a new contract with pisign. With just a few easy steps: Upload the file, Add people, Assign their role, and then create successfully."
+      },
+      { "src": "/images/projects/hifpt_s5.png" },
+      {
+        "images": [{ "alt": "1", "src": "/images/projects/hifpt_2_s1.png" }]
+      }
+    ]
+  }
+]

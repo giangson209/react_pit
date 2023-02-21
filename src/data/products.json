@@ -1,0 +1,63 @@
+[
+  {
+    "id": 0,
+    "title": "BANKRT",
+    "description": "A private banking consists of personalized financial services & products offered to the high-net-worth individual (HNWIs).",
+    "tags": ["WEBSITE", "INTERACTION", "ILLUSTRATION", "ANIMATION", "BRANDING"],
+    "thumbnail": {
+      "src": "/images/projects/bankrt_thumbnail.png",
+      "alt": "123"
+    }
+  },
+  {
+    "id": 1,
+    "title": "GIMO",
+    "description": "GIMO is an enterprise focused on providing flexible salary solutions for businesses and employees.",
+    "tags": ["WEBSITE", "INTERACTION", "ILLUSTRATION", "ANIMATION", "BRANDING"],
+    "thumbnail": {
+      "src": "/images/projects/gimo_thumbnail.png",
+      "alt": "123"
+    }
+  },
+  {
+    "id": 2,
+    "title": "ORG Invest",
+    "description": "The application provides investment opportunities for people without much experience. Investing with ORG helps capital grow steadily, safely and transparently.",
+    "tags": ["WEBSITE", "INTERACTION", "ILLUSTRATION", "ANIMATION", "BRANDING"],
+    "thumbnail": {
+      "src": "/images/projects/org_thumbnail.png",
+      "alt": "123"
+    }
+  },
+  {
+    "id": 3,
+    "title": "pisign",
+    "description": "pisign is an amazing website that helps you manage, sign document easily, that also save time and money with clients.",
+    "tags": ["WEBSITE", "INTERACTION", "ILLUSTRATION", "ANIMATION", "BRANDING"],
+    "thumbnail": {
+      "src": "/images/projects/pisign_thumbnail.png",
+      "alt": "123"
+    }
+  },
+  {
+    "id": 4,
+    "title": "OneVinmec",
+    "description": "OneVinmec is Vinmec's exclusive smart healthcare application with an advanced technology platform. Features are updated regularly and always optimized continuously.",
+    "tags": ["WEBSITE", "INTERACTION", "ILLUSTRATION", "ANIMATION", "BRANDING"],
+    "thumbnail": {
+      "src": "/images/projects/vinmect_thumbnail.png",
+      "alt": "123"
+    }
+  },
+  {
+    "id": 5,
+    "title": "HiFPT",
+    "subtitle": "Convenient Network Management App",
+    "description": "Hi FPT is a  multi featured application to serve the needs of customers according to the following criteria: Safety, Quality and Convenience.",
+    "tags": ["WEBSITE", "INTERACTION", "ILLUSTRATION", "ANIMATION", "BRANDING"],
+    "thumbnail": {
+      "src": "/images/projects/hifpt_thumbnail.png",
+      "alt": "123"
+    }
+  }
+]

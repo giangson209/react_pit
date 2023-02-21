@@ -1,0 +1,45 @@
+.nav {
+  @apply text-neutral-800 dark:text-neutral-0 text-sm md:text-xs;
+  @apply container;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.animation {
+  @apply animate-show;
+}
+.nav__container {
+  display: flex;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.navLogo {
+}
+
+.nav__menu {
+  @apply md:block hidden;
+  margin-left: auto;
+}
+.nav__menu_container {
+  @apply 3xl:gap-x-[96px] 2xl:gap-x-[72px] md:gap-x-[54px];
+  display: flex;
+  align-items: center;
+}
+.nav__btn_menu {
+  @apply md:hidden block ml-auto;
+}
+
+// Extra
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  // @apply fixed top-0 inset-x-0;
+}
+.noBack {
+  @apply bg-transparent;
+}

@@ -1,0 +1,18 @@
+.container {
+  @apply relative;
+}
+
+.item {
+  @apply relative inline-block;
+}
+.container > :nth-child(2) {
+  @apply relative;
+}
+.boundary {
+  @apply absolute inset-0;
+  border-radius: 100%;
+}
+
+.container[data-debug] .boundary {
+  @apply outline outline-cyan-200;
+}
